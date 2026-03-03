@@ -14,7 +14,7 @@ import cookieParser from "cookie-parser";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const corsOrigins = (process.env.CORS_ORIGIN ?? "http://localhost:5173,http://127.0.0.1:5173")
+const corsOrigins = (process.env.CORS_ORIGIN ?? "http://localhost:8080,http://127.0.0.1:8080")
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
@@ -736,7 +736,7 @@ app.get("*", (_req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 
-const PORT = Number(process.env.PORT) || 3001;
+const PORT = Number(process.env.PORT) || 3000;
 await connectMongo();
 await connectRedis();
 server.listen(PORT, () => {

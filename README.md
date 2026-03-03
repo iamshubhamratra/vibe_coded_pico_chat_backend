@@ -25,7 +25,7 @@ npm run server
 
 Server default URL:
 
-- `http://localhost:3001`
+- `http://localhost:3000`
 
 Health check:
 
@@ -35,14 +35,14 @@ Health check:
 
 Use the root `.env` file:
 
-- `PORT=3001`
+- `PORT=3000`
 - `MONGODB_URI=...`
 - `REDIS_URL=...` (optional)
 - `JWT_SECRET=...`
 - `JWT_EXPIRES_IN=7d`
 - `AUTH_COOKIE_NAME=pico_auth`
 - `COOKIE_SECURE=false` (set `true` in production over HTTPS)
-- `CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173`
+- `CORS_ORIGIN=http://localhost:8080,http://127.0.0.1:8080`
 
 ## Notes
 
