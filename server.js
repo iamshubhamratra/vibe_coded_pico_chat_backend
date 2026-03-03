@@ -732,8 +732,8 @@ app.get("/health", (_req, res) => {
 
 const distPath = path.resolve(__dirname, "../dist");
 app.use(express.static(distPath));
-app.get("/*", (_req, res) => {
-  res.sendFile(path.join(distPath, "index.html"));
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
 });
 
 const PORT = Number(process.env.PORT) || 3000;
